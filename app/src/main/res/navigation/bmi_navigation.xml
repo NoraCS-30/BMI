@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/HeighWeight"
+    android:id="@+id/bmi_navigation">
+
+    <fragment
+        android:id="@+id/HeighWeight"
+        android:name="com.example.bmi.freqment.info_Fragment"
+        android:label="HeighWeight"
+        tools:layout="@layout/fragment_height__weight_" >
+        <action
+            android:id="@+id/action_HeighWeight_to_Result"
+            app:destination="@id/Result" />
+    </fragment>
+    <fragment
+        android:id="@+id/Result"
+        android:name="com.example.bmi.freqment.ResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_Result_to_HeighWeight"
+            app:destination="@id/HeighWeight" />
+    </fragment>
+
+</navigation>
